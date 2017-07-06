@@ -1,25 +1,33 @@
-<html>
+<head>
     <head>
-        <title>JavaScript stuff</title>
-        <script src="program.js" type="application/javascript"></script>
+        <title>Play J</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#runbutton').click(function () {
+                  var code = $('#area').val();
+                  var result = eval(code);
+                  $('#output').html(result);
+                });
+            });
+        </script>
     </head>
+
     <body>
-        <div id="results">
-            <h1>
-                0
-            </h1>
-            <h2>
-                Che il pollo sia con te!
-            </h2> 
-            <h1>
-                1
-            </h1>
-            <h1>
-                2
-            </h1>
-            <h1>
-                3
-            </h1>
+
+        <h1> Write your JavaScript here </h1>
+        <textarea id="area" style="font-family: Menlo, Monaco, Consolas, monospaced" rows="4" cols="50">
+        </textarea>
+        <button id="runbutton" class="btn btn-danger btn-lg">
+            <span class="glyphicon glyphicon-play-circle"></span> RUN 
+        </button>
+        <h2> Output </h2>
+        <div id="output">
         </div>
     </body>
-</html>
+</head>
