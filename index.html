@@ -12,6 +12,7 @@
                 $('#runbutton').click(function () {
                     var code = $('#area').val();
                     var result = eval(code);
+                    console.log(">> " + result);
                     $('#output').html(result);
                 });
             });
@@ -26,8 +27,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">mode_edit</i>
-                    <textarea id="textarea1" class="materialize-textarea source"></textarea>
-                    <label for="textarea1">Type your JavaScript here</label>
+                    <textarea id="area" class="materialize-textarea source"></textarea>
+                    <label for="area">Type your JavaScript here</label>
                 </div>
             </div>
         </form>
